@@ -1,0 +1,11 @@
+19/09/2020(Samedi)
+10h30 Matériel installé au coworking Lacanau
+10h45 Premier document de design écrit
+11h00 Plan général écrit
+11h30 Je renonce à l'approche "tiles", trop coûteuse à mettre en oeuvre
+12h45 Gros soucis d'importation d'assets (marche mal si mis à jour)
+13h45 Pause repas
+14h45 Pas de solution trouvée ; je commence à regarder les APIs 2D
+16h30 Souci d'import résolu ; je reprends mon plan initial
+18h30 Placeholder bateau (mal) animé, vague caméra tracking
+19h00 Quelques rochets en dur, eau transparente

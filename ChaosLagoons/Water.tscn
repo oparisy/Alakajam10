@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+albedo_color = Color( 0.443137, 0.494118, 0.67451, 0.392157 )
+
+[sub_resource type="PlaneMesh" id=1]
+material = SubResource( 2 )
+size = Vector2( 2000, 2000 )
+
+[node name="Water" type="Spatial"]
+
+[node name="WaterSurface" type="CSGMesh" parent="."]
+mesh = SubResource( 1 )

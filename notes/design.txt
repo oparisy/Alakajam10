@@ -1,0 +1,45 @@
+Concept / Gameplay
+"Ships" : le joueur est une navette rapide, ses ennemis des bateaux
+"Maps" : on reconstruit la minimap en trouvant neuf cartes réparties dans l'environnement
+"Chaos" : juicing, armes explosives, beaucoup de particules, shmups, peut-être procédural ?
+But du jeu : trouver et détruire un boss
+
+Les cartes à trouver sont présentes sur la minimap (une fois l'emplacement correspondant découvert)
+Le jeu est suffisamment grand pour qu'il ne soit pas trivial de les trouver ou de tomber sur le boss sans information
+
+Se joue à la manette pour précision (on tire vers l'avant, un seul stick)
+Prévoir fallback flèches clavier
+
+
+Design Graphique
+Style lowpoly, essentiellement vu de dessus
+Carte générée et positions éléments en 2D
+Certains effets de particules en 3D
+Approche par "tileset" modelisés rapidement dans Blender
+Pas de surface d'eau animée (pas le temps), peut-être effet "plusieurs plans" avec un peu de transparence ?
+Particules pour trainée d'eau, fumée, explosions...
+Approche "modulo sur coordonnées" pour afficher une fenêtre rectangulaire "torique" sur un monde plus grand
+
+
+HUD
+Minimal : armure, minicarte
+Approche "nord vers le haut" fixée, mais scrolling minimal (on est toujours au centre)
+
+
+Technique, plateforme
+Moteur : Godot
+Cible : exe Windows
+Modèles : glTF "principled shader" Blender + palette de couleurs restreinte
+
+
+Strech goals
+Power ups à trouver ou XP à grinder pour faciliter combat final
+Petits modèles sympas pour faire vivre les îles (palmiers, cahutes)
+Son, musique (qq mesures !)
+Une musique en plus pour le boss ?
+Génération procédurale de la carte avec seeds (utiliser du bruit pour générer les zones de terre) :
+https://www.hackingwithswift.com/example-code/games/how-to-create-a-random-terrain-tile-map-using-sktilemapnode-and-gkperlinnoisesource
+
+
+Nom
+Chaos Lagoons

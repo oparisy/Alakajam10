@@ -1,0 +1,36 @@
+Samedi :
+ * [Fait] Document de design
+ * [Fait] Etude / choix approche carte (Tiled, hardcodée, générée ?)
+ * [Fait] Placeholder glTF animé par clavier
+ * [Fait] Suivi par caméra, avec un retard ?
+ * [Fait] Affichage de quelques placeholders glTF décors (hardcodés)
+ * [Fait] Eau minimale
+ * Collisions décors
+ * Structure de données pour carte
+ * Mécanisme "torique" pour affichage
+ * Améliorer un peu déplacements ?
+ * Enemis : placeholders mais animations, tirs
+ * Affichage minicarte (complète initialement)
+ * Collecte cartes (placeholders) + affichage progressif minicarte
+ * Tirs joueur
+ * Destruction ennemis
+ * Tirs ennemis
+ * Perte points de vie joueur
+ * Mécanisme de game over (à préciser)
+ * Ecran titre
+ * Mécanisme de victoire
+ * Modéliser assets
+ * Juicing
+ * Musique titre & jeu
+
+Extra :
+ * Animation par stick manette
+ * Effets d'eau (écume sur les plages ?)
+ * Boss
+ * Support clavier
+ * Musique Boss
+ * Powerups / XP
+ * Plus de juicing
+ * Rendu assets pour titre
+ * "bidules" (pour plus de vie sur la carte : bouées, palmiers, cahutes)
+ * Génération procédurale avec seed

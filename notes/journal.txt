@@ -1,0 +1,93 @@
+19/09/2020
+Installé au coworking de Lacanau, avec Rémi, Ben, Rémy
+Matériel OK, "overscan" désagréable de mon laptop sur second moniteur
+Assez d'espace et d'aération pour limiter le masque Covid
+
+Thèmes JAM : Ships, Maps, Chaos
+
+Travail sur document de design. J'ai pris connaissance du thème hier soir et ai quelques idées
+
+Travail sur plan. Je commence à sortir des éléments du scope à la vue du nombre d'éléments à prévoir :)
+
+Je lis la documentation de Tiled pour voir s'il peut convenir à mes besoins
+Formats : https://doc.mapeditor.org/en/stable/manual/export/
+
+Je ne suis pas convaincu par le mécanisme de Gridmaps Godot :
+https://docs.godotengine.org/fr/stable/tutorials/3d/using_gridmaps.html
+Mais pas ennvie de réinventer la roue donc il faut que je fasse simple...
+
+Utiliser format JSON d'exportation Tiled semble raisonnable
+
+Points Godot à prototyper rapidement :
+ - Chargement JSON dans Godot ?
+ - Instanciation assets glTF programmatiquement ?
+
+Ensuite sera-t-il pratique d'avoir un tileset 2D pour la carte et de remodéliser en 3D ?
+Idéal sera de faire un rendu des assets depuis Blender, mais long !
+Sinon utiliser tileset "de prototypage", pas inclus dans le jeu final
+
+J'installe Tiled 1.4.2 pour voir s'il peut me faire gagner du temps par rapport à de la génération procédurale ou une carte hardcodée
+
+Testé, va me prendre trop de temps : trouver une tileset, apprendre GUI, etc.
+
+=> je laisse tomber l'approche par "tiles" : à la place, modélisation explicite d'îles sous forme de "gros" assets
+=> placement programmatique de ces assets
+
+J'exporte un vague placeholder pour le joueur
+Blender : gltb export, format "gltf", Limit too select object, Y up, Materials
+Options recommandées par https://www.youtube.com/watch?v=grPbk-bfMO4&ab_channel=SavvyBarbarian
+Export dans un répertoire "assets/models" créé dans le projet Godot
+Import en "Open Anyway" marche bien
+Asset se met à jour "en temps réel" dans Godot si réexporté
+Des soucis de réimport après un certain temps => réimporté comme "New Inherited Scene"
+Idem :
+ editor/editor_file_system.cpp:1766 - BUG: File queued for import, but can't be imported!
+ editor/editor_file_system.cpp:1767 - Method failed.
+
+Je n'arrive pas à trouver un workflow robuste
+
+En discussion avec "QbieShay#4610" sur Discord, qui cherche à m'aider et semble travailler en mode source sur Godot
+
+Reproduit mon problème mais n'a pas trouvé de workaround malgré ses efforts
+
+J'ai fait une pause repas entre temps
+
+Je vais regarder les mécanismes 2D de Godot, j'envisage un rendu simple avec des formes géométriques ?
+Je vois cité Polygon2D
+Il ne semble pas y avoir d'éditeur pour construire des formes simples
+
+A priori je peux dessiner programmatiquement via la méthode _draw() de CanvasItem :
+https://www.youtube.com/watch?v=Xa0tHyZdyeM&ab_channel=GodotTutorials
+
+On peut centrer la caméra sur le joueur avec un noeud Camera2D :
+https://www.youtube.com/watch?v=zhUuxgDT0NA&ab_channel=GodotTutorials
+
+On peut utiliser plusieurs viewports pour la minimap :
+https://www.youtube.com/watch?v=euQZ-jddoBo&ab_channel=GodotTutorials
+Permet aussi de mélanger 2D et 3D !
+
+
+Après recherche sur github et étude de :
+https://github.com/godotengine/godot/issues/15853
+
+Passer "Import" > "Material"> "Storage" à "Built-in" semble résoudre le problème !
+Je suis en glb, semble bien fonctionner
+
+QbieShay me conseille de relire cette page, et va y ajouter ce point de documentation :
+https://docs.godotengine.org/en/latest/getting_started/workflow/assets/importing_scenes.html
+
+Chouette doc sur animation KinematicBody et suivi camera (exactement là où j'en suis) :
+https://www.youtube.com/watch?time_continue=52&v=rOA8i_clm1Y&feature=emb_logo&ab_channel=KidsCanCode
+
+Camera + "2 viewports" + "Preview" génial pour mettre au point cible caméra !
+
+J'ai vaguement un modèle de joueur et une caméra. Perfectible (InterpolatedCamera dépréciée et difficile à régler),
+mais permet d'avancer
+
+Transparence eau : voir ce tutorial :
+https://www.youtube.com/watch?v=jbYrpKWTlpw&ab_channel=Maujoe%27sMedley
+
+Points essentiels : Spacial Material, Flags > Transparent, Albedo > diminuer Alpha
+
+Partage sur github (repo privé pour l'instant...)
+Je fais un "git config core.autocrlf false" par sécurité (pour ne pas que les fichiers Godot soient modifiés)
