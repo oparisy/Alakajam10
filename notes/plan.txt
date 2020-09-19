@@ -5,10 +5,11 @@ Samedi :
  * [Fait] Suivi par caméra, avec un retard ?
  * [Fait] Affichage de quelques placeholders glTF décors (hardcodés)
  * [Fait] Eau minimale
- * Collisions décors
+ * [Fait] Premier commit github
+ * [Fait] Collisions décors
+ * Améliorer un peu déplacements
  * Structure de données pour carte
  * Mécanisme "torique" pour affichage
- * Améliorer un peu déplacements ?
  * Enemis : placeholders mais animations, tirs
  * Affichage minicarte (complète initialement)
  * Collecte cartes (placeholders) + affichage progressif minicarte
@@ -24,6 +25,7 @@ Samedi :
  * Musique titre & jeu
 
 Extra :
+ * Améliorer "ciel"
  * Animation par stick manette
  * Effets d'eau (écume sur les plages ?)
  * Boss

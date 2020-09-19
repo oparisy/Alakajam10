@@ -9,3 +9,5 @@
 16h30 Souci d'import résolu ; je reprends mon plan initial
 18h30 Placeholder bateau (mal) animé, vague caméra tracking
 19h00 Quelques rochets en dur, eau transparente
+19h15 Premier commit git ; pause 15mn
+19h40 Collisions avec rochers
