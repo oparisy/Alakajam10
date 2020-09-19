@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://PlayerBody.tscn" type="PackedScene" id=1]
-[ext_resource path="res://RockModel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Water.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Main.gd" type="Script" id=4]
 
 [node name="Main" type="Spatial"]
+script = ExtResource( 4 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.78843, 0.615125, 0, -0.615125, 0.78843, 0, 13.6492, 16.4854 )
@@ -14,15 +15,6 @@ speed = 5.0
 enabled = true
 
 [node name="FakeStaticScene" type="Position3D" parent="."]
-
-[node name="rock" parent="FakeStaticScene" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.67113, 0, -16.02 )
-
-[node name="RockModel" parent="FakeStaticScene" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7481, 0, -9.39579 )
-
-[node name="RockModel2" parent="FakeStaticScene" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8425, 0, -3.4467 )
 
 [node name="PlayerBody" parent="." instance=ExtResource( 1 )]
 

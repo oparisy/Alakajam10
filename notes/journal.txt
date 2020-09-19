@@ -93,3 +93,26 @@ Partage sur github (repo privé pour l'instant...)
 Je fais un "git config core.autocrlf false" par sécurité (pour ne pas que les fichiers Godot soient modifiés)
 
 Déplacements significativement améliorés en cappant la vitesse
+
+Algo "wrap around" : pas si simple ; il faut probablement ou afficher les objets "proches"
+(pose problème de distance max et de calcul de collision avec frustrum), ou afficher des
+objets en doubles / triple (approches "9 écrans") + modulo coordonnées joueur
+Je google (le terme utilise semble être "wrap around world")
+https://forum.unity.com/threads/flat-seamlessly-wrapping-3d-world.180556/
+https://community.khronos.org/t/continuous-world-world-wrapping/29258/13
+
+Le multi-rendu me semble compliqué => plutôt modulo sur coordonnées joueur et
+spacial search sur rectangle (range query) ou cercle (radius query) centré sur le joueur,
+suivant ce qui est le plus simple (+ multiplier par 9 les assets) :
+https://blog.mapbox.com/a-dive-into-spatial-search-algorithms-ebd0c5e39d2a
+
+Godot implémente le frustum culling donc il est peut-être plus simple d'afficher 9 fois plus d'objets
+et de faire un modulo pour garder les coordonnées du joueur dans le carré central ! Au pire j'ajusterai
+la taille de la grille pour avoir plus de perfs
+
+Motif de base carte : fichier ascii de NxN caractères, espace = rien, sinon un identifiant (caractère ASCII)
+Prendre un N multiple de 9 pour avoir les 9 cartes
+On va perdre l'"organicité" d'un placement à la main => faire plutôt une scène dans Blender + script export ?
+Ou, plus simple : une scène Godot pour carte globale,et l'instancier 9 fois !
+Je gagne en plus les rotations
+Pour la mini-carte, extraire des coordonnées de cette scène au démarrage sera le plus simple...

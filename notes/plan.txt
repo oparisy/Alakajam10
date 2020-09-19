@@ -8,15 +8,16 @@ Samedi :
  * [Fait] Premier commit github
  * [Fait] Collisions décors
  * [Fait] Améliorer un peu déplacements
- * Structure de données pour carte
- * Mécanisme "torique" pour affichage
- * Enemis : placeholders mais animations, tirs
+ * [Fait] instanciation rochers
+ * Ajouter un peu de "drag" pour que le bateau ralentisse
+
+Dimanche :
+ * Scène "monde"
+ * Instanciation multiple de cette scène + modulo pour affichage "torique"
+ * Soleil pour ombres et aider à s'orienter
  * Affichage minicarte (complète initialement)
  * Collecte cartes (placeholders) + affichage progressif minicarte
- * Tirs joueur
- * Destruction ennemis
- * Tirs ennemis
- * Perte points de vie joueur
+ * Perte points de vie joueur (sur collisions)
  * Mécanisme de game over (à préciser)
  * Ecran titre
  * Mécanisme de victoire
@@ -24,7 +25,12 @@ Samedi :
  * Juicing
  * Musique titre & jeu
 
-Extra :
+Extra (ordre arbitraire) :
+ * Nuages
+ * Enemis : placeholders mais animations, tirs
+ * Tirs joueur
+ * Tirs ennemis
+ * Destruction ennemis
  * Améliorer "ciel"
  * Animation par stick manette
  * Effets d'eau (écume sur les plages ?)

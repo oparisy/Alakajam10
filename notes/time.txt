@@ -12,3 +12,5 @@
 19h15 Premier commit git ; pause 15mn
 19h40 Collisions avec rochers
 20h00 Amélioration déplacement bateau ; pause repas
+20h50 Reprise
+21h50 Instanciation des rochets programmatique

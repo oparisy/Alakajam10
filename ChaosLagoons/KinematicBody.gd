@@ -5,7 +5,7 @@ extends KinematicBody
 # No gravity, we float...
 
 export var speed = 0.4
-export var rot_speed = 0.85
+export var rot_speed = 1.3
 export var max_speed = 15
 
 var max_speed_squared = max_speed * max_speed
