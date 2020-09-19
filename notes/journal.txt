@@ -91,3 +91,5 @@ Points essentiels : Spacial Material, Flags > Transparent, Albedo > diminuer Alp
 
 Partage sur github (repo privé pour l'instant...)
 Je fais un "git config core.autocrlf false" par sécurité (pour ne pas que les fichiers Godot soient modifiés)
+
+Déplacements significativement améliorés en cappant la vitesse

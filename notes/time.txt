@@ -11,3 +11,4 @@
 19h00 Quelques rochets en dur, eau transparente
 19h15 Premier commit git ; pause 15mn
 19h40 Collisions avec rochers
+20h00 Amélioration déplacement bateau ; pause repas

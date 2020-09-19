@@ -7,7 +7,7 @@ Samedi :
  * [Fait] Eau minimale
  * [Fait] Premier commit github
  * [Fait] Collisions décors
- * Améliorer un peu déplacements
+ * [Fait] Améliorer un peu déplacements
  * Structure de données pour carte
  * Mécanisme "torique" pour affichage
  * Enemis : placeholders mais animations, tirs
