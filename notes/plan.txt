@@ -24,8 +24,8 @@ Dimanche :
  * [Fait] Association cartes/zones/éléments et leur affichage "permanent" sur minicarte
  * [Fait] Mécanisme de victoire
  * [Fait] Ecran victoire
- * Modéliser bateau décemment
- * Ecran titre
+ * [Fait] Modéliser bateau décemment
+ * [Fait] Ecran titre
 
 Souhaitables :
  * HUD avec objectifs

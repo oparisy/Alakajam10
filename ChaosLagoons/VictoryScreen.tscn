@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://DynamicFont-Fredoka.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://DynamicFontData-Fredoka.tres" type="DynamicFontData" id=1]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 0.686275, 0.278431, 0.278431, 1, 0.458824, 0.133333, 0.133333, 1 )

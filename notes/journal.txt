@@ -158,3 +158,7 @@ https://fonts.google.com/specimen/Fredoka+One
 
 Utilisation fonte dans Godot :
 https://godotengine.org/qa/20870/how-do-you-bring-fonts-into-godot-3-0
+
+Mise en place écran de titre pas évidente... Il faudra que je creuse un peu plus les "Control"
+
+Terminé à 20h45. Pas de musique, jeu simple, mais Godot prometteur.

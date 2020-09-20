@@ -28,4 +28,6 @@
 15h50 Cartes à récupérer modélisées, collision détectée ; pause
 17h25 Mécanisme de "reveal" pour rochers et scrolls
 18h30 Gemme modélisée et intégrée, mécanisme de "reveal" et détection de collision
-19h05 Ecran de victoire affiché
+19h05 Ecran de victoire affiché ; pause repas
+20h05 Bateau mieux modélisé
+20h45 Ecran de titre, câblage, exportation finale
