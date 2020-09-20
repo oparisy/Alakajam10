@@ -20,7 +20,7 @@ Dimanche :
  * [Fait] Tester un export EXE pour éviter les suprises !
  * [Fait] Affichage minicarte (position joueur)
  * [Fait] Affichage minicarte (mode "sonar")
- * Collecte cartes (placeholders)
+ * [Fait] Collecte cartes (placeholders)
  * Association cartes/zones/éléments et leur affichage "permanent" sur minicarte
  * Mécanisme de victoire
  * Modéliser bateau décemment

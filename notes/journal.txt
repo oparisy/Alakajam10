@@ -149,3 +149,5 @@ Support antialiasing limité sur _draw() (prévu en version 4.0), les cercles en p
 => je vais me limiter à des formes petites et simples
 
 Minimap joueur et rochers faite ; j'ai un peu de mal à contrôler les couleurs (mauvaises interaction avec alpha ?)
+
+Pour la détection de la proximité des parchemins, je dois pouvoir utiliser "Area" => marche bien
