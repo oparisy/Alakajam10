@@ -9,29 +9,37 @@ Samedi :
  * [Fait] Collisions décors
  * [Fait] Améliorer un peu déplacements
  * [Fait] instanciation rochers
- * Ajouter un peu de "drag" pour que le bateau ralentisse
+ * [Fait] Ajouter un peu de "drag" pour que le bateau ralentisse
 
 Dimanche :
- * Scène "monde"
- * Instanciation multiple de cette scène + modulo pour affichage "torique"
- * Soleil pour ombres et aider à s'orienter
- * Affichage minicarte (complète initialement)
- * Collecte cartes (placeholders) + affichage progressif minicarte
- * Perte points de vie joueur (sur collisions)
- * Mécanisme de game over (à préciser)
- * Ecran titre
+ * [Fait] Faire plus de placeholders pour le monde
+ * [Fait] Scène "monde"
+ * [Fait] Améliorer "ciel"
+ * [Fait] Soleil pour ombres et aider à s'orienter
+ * Tester un export EXE pour éviter les suprises !
+ * Affichage minicarte (mode "sonar")
+ * Collecte cartes (placeholders)
+ * Association cartes/zones/éléments et leur affichage "permanent" sur minicarte
  * Mécanisme de victoire
- * Modéliser assets
- * Juicing
- * Musique titre & jeu
+ * Modéliser bateau décemment
+ * Particules pour sillage bateau
+ * Ecran titre
 
 Extra (ordre arbitraire) :
+ * Choix résolution finale
+ * Fog pour planquer affichage "far" ?
+ * Juicing
+ * Musique titre & jeu
+ * Perte points de vie joueur (sur collisions)
+ * Mécanisme de game over (à préciser)
+ * Instanciation multiple de cette scène + modulo pour affichage "torique"
+ * rot_speed fonction de la vitesse (plus basse si lent)
  * Nuages
  * Enemis : placeholders mais animations, tirs
  * Tirs joueur
  * Tirs ennemis
  * Destruction ennemis
- * Améliorer "ciel"
+ * Animation eau : plan subdivisé + bruit initial (Perlin ?) + translation + cos(delta) pour houle
  * Animation par stick manette
  * Effets d'eau (écume sur les plages ?)
  * Boss

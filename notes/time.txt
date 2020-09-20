@@ -1,4 +1,4 @@
-19/09/2020(Samedi)
+19/09/2020 (Samedi)
 10h30 Matériel installé au coworking Lacanau
 10h45 Premier document de design écrit
 11h00 Plan général écrit
@@ -14,3 +14,9 @@
 20h00 Amélioration déplacement bateau ; pause repas
 20h50 Reprise
 21h50 Instanciation des rochets programmatique
+22h10 Drag ajouté, meilleure maniabilité
+
+20/09/2020 (Dimanche)
+09h00 Reprise
+09h30 Plus de placeholders, carte du monde faite
+11h00 Travail sur fond, lumière et environnement (ciel, ombres, fog...)

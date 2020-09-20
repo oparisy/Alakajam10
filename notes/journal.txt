@@ -116,3 +116,25 @@ On va perdre l'"organicité" d'un placement à la main => faire plutôt une scène d
 Ou, plus simple : une scène Godot pour carte globale,et l'instancier 9 fois !
 Je gagne en plus les rotations
 Pour la mini-carte, extraire des coordonnées de cette scène au démarrage sera le plus simple...
+
+Bilan de la journée : débloqué grâce à la communauté. Maintenant que j'en suis au codage du jeu
+(noeuds de base en place et suffisamment compris), bonne sensation de productivité et de
+possibilités offertes par le moteur ! Rassuré en particulier par la facilité à instancier
+programmatiquement, et l'approche par scènes commence à "cliquer"
+
+
+20/09/2020
+A la réflection, l'approche "torique" va compliquer la mini-carte
+Je vais plutôt tenter de faire une unique carte au milieu de l'océan, avec peut-être une flèche pour guider
+le joueur s'il est perdu
+Je pourrai toujours utiliser cette carte comme base d'instanciation si finalement nécessaire
+
+A l'usage, j'ai pu faire une grande carte à coup de copier-coller et rotations
+La performance semble OK et l'aire de jeu suffisante
+
+Pour la minicarte :
+- je vais faire un mode "sonar" fixe sur la minicarte mais lié à la distance aux rochers et objectifs
+- si objet "révélé" par la carte, il est constamment allumé
+
+J'ai un peu (trop) joué avec les effets de transparence et le ciel procédural
+

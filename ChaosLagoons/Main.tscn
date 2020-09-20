@@ -6,11 +6,13 @@
 [ext_resource path="res://Main.gd" type="Script" id=4]
 
 [node name="Main" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 4 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.78843, 0.615125, 0, -0.615125, 0.78843, 0, 13.6492, 16.4854 )
 current = true
+far = 200.0
 target = NodePath("../PlayerBody/CamTarget")
 speed = 5.0
 enabled = true
@@ -22,8 +24,14 @@ enabled = true
 [node name="PlayerBody" parent="." instance=ExtResource( 1 )]
 
 [node name="CamTarget" type="Position3D" parent="PlayerBody"]
-transform = Transform( 1, 0, 0, 0, 0.773276, 0.634069, 0, -0.634069, 0.773276, 0, 13.6452, 16.4309 )
+transform = Transform( 1, 0, 0, 0, 0.929046, 0.369956, 0, -0.369956, 0.929046, 0, 8.06906, 11.1482 )
 
 [node name="FakeCamera" type="Camera" parent="PlayerBody/CamTarget"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Water" parent="PlayerBody" instance=ExtResource( 3 )]
+
+[node name="Sun" type="DirectionalLight" parent="."]
+transform = Transform( 0.755636, 1.40748e-09, 0.654992, -0.481936, 0.67721, 0.55599, -0.443567, -0.73579, 0.511724, 10.5744, 20.7992, 8.73918 )
+shadow_enabled = true
+directional_shadow_blend_splits = true
