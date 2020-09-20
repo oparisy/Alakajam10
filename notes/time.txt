@@ -23,6 +23,7 @@
 11h15 Export exe ok, rendu affiné
 11h30 Pause repas
 12h15 Reprise
-13h30 Affichage minimap avec position joueur; pause
+13h30 Affichage minimap avec position joueur ; pause
 14h25 Mode "radar" pour rochers réalisé
-15h50 Cartes à récupérer modélisées, collision détectée
+15h50 Cartes à récupérer modélisées, collision détectée ; pause
+17h25 Mécanisme de "reveal" pour rochers et scrolls

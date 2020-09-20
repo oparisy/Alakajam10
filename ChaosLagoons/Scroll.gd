@@ -1,5 +1,7 @@
 extends Spatial
 
+signal picked
+
 var elapsed = 0;
 var baseY
 
@@ -14,10 +16,12 @@ func _physics_process(delta):
 	
 	elapsed += delta
 
-func _on_Area_body_entered(body):
+func _on_Area_body_entered(_body):
 	if !visible:
 		# Do nothing if already picked
 		return
 
 	# We got collected; hide
 	visible = false
+	
+	emit_signal('picked', self)	

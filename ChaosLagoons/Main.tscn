@@ -36,6 +36,7 @@ transform = Transform( 0.755636, 1.40748e-09, 0.654992, -0.481936, 0.67721, 0.55
 shadow_enabled = true
 directional_shadow_blend_splits = true
 
-[node name="Minimap" parent="." instance=ExtResource( 5 )]
-
 [node name="CollectibleMaps" parent="." instance=ExtResource( 6 )]
+
+[node name="Minimap" parent="." instance=ExtResource( 5 )]
+[connection signal="scroll_picked" from="CollectibleMaps" to="." method="_on_CollectibleMaps_scroll_picked"]

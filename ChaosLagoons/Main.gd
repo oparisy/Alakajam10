@@ -15,9 +15,12 @@ onready var playerBody = get_node("PlayerBody")
 
 # Used to get static assets informations
 onready var worldAssets = get_node("WorldAssets")
+onready var scrollAssets = get_node("CollectibleMaps")
 
 # Array of 2D coords (taken from handplaced nodes inspector)
 var coords = [] # [[4.671, -16.02], [-12.748, -9.396], [12.842, -3.447]]
+
+var toCollect = 9
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,10 +31,21 @@ func _ready():
 		add_child_below_node(baseNode, rock)
 		
 	# Send fixed assets coordinates once to minimap
-	minimap.set_world_assets(worldAssets.get_assets_positions())
+	minimap.set_world_assets(worldAssets.get_assets_positions(), "rock")
+	minimap.set_world_assets(scrollAssets.get_assets_positions(), "scroll")
 
 func _process(_delta):
 	# Fetch player position, send it to minimap
 	# TODO Use a signal instead maybe
 	var playerPos = playerBody.get_position()
 	minimap.set_player_position(playerPos)
+
+
+func _on_CollectibleMaps_scroll_picked(which:int):
+	print("Scroll " , which, " picked")
+	
+	# Take note of this
+	toCollect-=1
+
+	# Inform the minimap
+	minimap.revealPiece(which)
