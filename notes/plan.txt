@@ -23,13 +23,18 @@ Dimanche :
  * [Fait] Collecte cartes (placeholders)
  * [Fait] Association cartes/zones/éléments et leur affichage "permanent" sur minicarte
  * [Fait] Mécanisme de victoire
- * Ecran victoire
+ * [Fait] Ecran victoire
  * Modéliser bateau décemment
  * Ecran titre
 
+Souhaitables :
+ * HUD avec objectifs
+ * Bruitages
+ * Musique
+ * "Equilibrage" (placement scrolls par rapport à ce qu'ils révèlent)
+
 Extra (ordre arbitraire) :
  * Particules pour sillage bateau
- * Choix résolution finale
  * Juicing
  * Musique titre & jeu
  * Perte points de vie joueur (sur collisions)
@@ -45,7 +50,6 @@ Extra (ordre arbitraire) :
  * Animation par stick manette
  * Effets d'eau (écume sur les plages ?)
  * Boss
- * Support clavier
  * Musique Boss
  * Powerups / XP
  * Plus de juicing

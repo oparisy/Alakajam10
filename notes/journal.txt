@@ -151,3 +151,10 @@ Support antialiasing limité sur _draw() (prévu en version 4.0), les cercles en p
 Minimap joueur et rochers faite ; j'ai un peu de mal à contrôler les couleurs (mauvaises interaction avec alpha ?)
 
 Pour la détection de la proximité des parchemins, je dois pouvoir utiliser "Area" => marche bien
+
+Fonte écrans : je recycle celle du presskit Alakajam, qui est libre :
+https://github.com/alakajam-team/alakajam-presskit
+https://fonts.google.com/specimen/Fredoka+One
+
+Utilisation fonte dans Godot :
+https://godotengine.org/qa/20870/how-do-you-bring-fonts-into-godot-3-0

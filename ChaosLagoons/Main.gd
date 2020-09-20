@@ -61,3 +61,4 @@ func _on_CollectibleMaps_scroll_picked(which:int):
 
 func _on_Gem_gem_picked():
 	print("You win!")
+	get_tree().change_scene("res://VictoryScreen.tscn")
