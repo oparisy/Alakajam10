@@ -19,7 +19,7 @@ Dimanche :
  * [Fait] Fog pour planquer affichage "far" ?
  * [Fait] Tester un export EXE pour éviter les suprises !
  * [Fait] Affichage minicarte (position joueur)
- * Affichage minicarte (mode "sonar")
+ * [Fait] Affichage minicarte (mode "sonar")
  * Collecte cartes (placeholders)
  * Association cartes/zones/éléments et leur affichage "permanent" sur minicarte
  * Mécanisme de victoire

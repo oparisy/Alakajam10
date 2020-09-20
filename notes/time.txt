@@ -23,4 +23,5 @@
 11h15 Export exe ok, rendu affiné
 11h30 Pause repas
 12h15 Reprise
-13h30 Affichage minimap avec position joueur
+13h30 Affichage minimap avec position joueur; pause
+14h25 Mode "radar" pour rochers réalisé

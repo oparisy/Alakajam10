@@ -147,3 +147,5 @@ HUD : apparemment juste dessiner des conteneurs 2D "à la fin" suffit => ajout à 
 
 Support antialiasing limité sur _draw() (prévu en version 4.0), les cercles en particulier passent mal
 => je vais me limiter à des formes petites et simples
+
+Minimap joueur et rochers faite ; j'ai un peu de mal à contrôler les couleurs (mauvaises interaction avec alpha ?)

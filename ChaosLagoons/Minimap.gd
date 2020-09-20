@@ -1,7 +1,11 @@
 extends Control
 
-onready var contents = $"Background/Contents"
+onready var contents = $"Contents"
 
-# Called  by main scene
+# Called once by main scene
+func set_world_assets(arr):
+	contents.worldAssetsPos = arr
+
+# Called  by main scene at each frame
 func set_player_position(pos):
 	contents.playerWorldPosition = pos	
