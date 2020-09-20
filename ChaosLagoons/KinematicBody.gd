@@ -6,7 +6,8 @@ extends KinematicBody
 
 export var speed = 0.4
 export var rot_speed = 1.3
-export var max_speed = 15
+export var max_speed = 25
+export var drag = 0.7
 
 var max_speed_squared = max_speed * max_speed
 
@@ -23,32 +24,24 @@ func _physics_process(delta):
 
 # See https://www.youtube.com/watch?v=rOA8i_clm1Y
 func get_input(delta):
-	var changed = false
+	var velocity_changed = false
 	if Input.is_action_pressed("forward"):
 		# "Local forward vector"
 		velocity += -transform.basis.z	* speed
-		changed = true
+		velocity_changed = true
 	if Input.is_action_pressed("backward"):
 		velocity += transform.basis.z	* speed
-		changed = true
+		velocity_changed = true
 	if Input.is_action_pressed("rotate_left"):
 		rotate_y(rot_speed * delta)
-		changed = true
 	if Input.is_action_pressed("rotate_right"):
 		rotate_y(-rot_speed * delta)
-		changed = true
 
-	if changed:
+	if velocity_changed:
 		var currentSpeedSqr = velocity.length_squared()
 		if currentSpeedSqr > max_speed_squared:
 			# Cap max speed while keeping direction
 			velocity = velocity.normalized() * max_speed
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	else:
+		# The ship will slow other time
+		velocity *= 1 - (drag * delta)

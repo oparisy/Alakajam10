@@ -8,7 +8,7 @@ onready var rockModel = preload("res://RockModel.tscn")
 onready var baseNode = get_node("FakeStaticScene")
 
 # Array of 2D coords (taken from handplaced nodes inspector)
-var coords = [[4.671, -16.02], [-12.748, -9.396], [12.842, -3.447]]
+var coords = [] # [[4.671, -16.02], [-12.748, -9.396], [12.842, -3.447]]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
