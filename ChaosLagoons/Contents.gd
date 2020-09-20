@@ -4,6 +4,8 @@ extends Control
 export var playerColor := Color.greenyellow
 export var rockColor:Color = Color("00f3ff")
 export var scrollColor:Color = Color("ff0000")
+export var gemColor:Color = Color("ff00ff")
+
 
 # Set by root node
 var playerWorldPosition = Vector3.ZERO
@@ -22,6 +24,14 @@ var center = size * 0.5
 var scaling = .25
 var offset = Vector2(-30, 15)
 
+# Gem-related informations
+var gemRevealed = false
+var gemMapPos = Vector2.ZERO
+
+# Used for gem dot animation purpose
+var elapsed = 0
+
+
 func setWorldAssetsPos(arr, kind:String):
 	var rank:int = 0
 	for p in arr:
@@ -33,6 +43,9 @@ func setWorldAssetsPos(arr, kind:String):
 func _process(_delta):
 	# We want to redraw at each frame
 	update()
+
+func _physics_process(delta):
+	elapsed += delta
 
 func _draw():
 	# Compute player position
@@ -52,9 +65,16 @@ func _draw():
 			color.a = 1 if revealed else compute_dist_coef(itemMapPos, playerMapPos)
 		if kind == "scroll":
 			color = scrollColor
-			color.a = 1 if revealed && !picked.has(rank) else 0
+			color.a = 0 if picked.has(rank) else (1 if revealed else compute_dist_coef(itemMapPos, playerMapPos))
 
 		draw_rect(Rect2(itemMapPos, Vector2(2, 3)), color, true)
+
+	# Show the gem
+	if gemRevealed:
+		var pulse = sin(elapsed)
+		var dim = Vector2(4,4)*(1+pulse)
+		var pos = gemMapPos - dim*0.5
+		draw_rect(Rect2(pos, dim), gemColor, true)
 
 	# Draw player last (cleaner)
 	draw_rect(Rect2(playerMapPos, Vector2(5, 5)), playerColor, true)
@@ -94,3 +114,9 @@ func revealPiece(which:int):
 		var ry = rock[0].y
 		var isIn = minx <= rx && rx < maxx && miny <= ry && ry < maxy
 		rock[1] = rock[1] || isIn
+
+
+# Called when the final gem is revealed
+func revealGem(worldPos):
+	gemRevealed = true
+	gemMapPos = world_to_map(worldPos)

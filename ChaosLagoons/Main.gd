@@ -17,6 +17,9 @@ onready var playerBody = get_node("PlayerBody")
 onready var worldAssets = get_node("WorldAssets")
 onready var scrollAssets = get_node("CollectibleMaps")
 
+# Used to display it
+onready var gem = get_node("GemLocation/Gem")
+
 # Array of 2D coords (taken from handplaced nodes inspector)
 var coords = [] # [[4.671, -16.02], [-12.748, -9.396], [12.842, -3.447]]
 
@@ -44,8 +47,17 @@ func _process(_delta):
 func _on_CollectibleMaps_scroll_picked(which:int):
 	print("Scroll " , which, " picked")
 	
+	# Inform the minimap
+	minimap.revealPiece(which)
+
 	# Take note of this
 	toCollect-=1
 
-	# Inform the minimap
-	minimap.revealPiece(which)
+	# If all scrolls are found, reveal the final gem
+	if toCollect == 0:
+		gem.visible = true
+		minimap.revealGem(gem.translation)
+
+
+func _on_Gem_gem_picked():
+	print("You win!")

@@ -13,3 +13,8 @@ func set_player_position(pos):
 # Called when a map scroll is collected
 func revealPiece(which:int):
 	contents.revealPiece(which)
+
+# Called when the gem is revealed
+func revealGem(worldPos):
+	contents.revealGem(worldPos)
+

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/models/gem.glb" type="PackedScene" id=1]
+[ext_resource path="res://Gem.gd" type="Script" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+
+[node name="Gem" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Area" type="Area" parent="." index="1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
+transform = Transform( 3.49928, 0, 0, 0, 4.88935, 0, 0, 0, 2.53088, 0, 3.47157, 0 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

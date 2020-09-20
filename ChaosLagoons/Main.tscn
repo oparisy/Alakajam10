@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://PlayerBody.tscn" type="PackedScene" id=1]
 [ext_resource path="res://WorldAssets.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Main.gd" type="Script" id=4]
 [ext_resource path="res://Minimap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://CollectibleMaps.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Gem.tscn" type="PackedScene" id=7]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 4 )
@@ -38,5 +39,12 @@ directional_shadow_blend_splits = true
 
 [node name="CollectibleMaps" parent="." instance=ExtResource( 6 )]
 
+[node name="GemLocation" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.4667, 0, 108.063 )
+
+[node name="Gem" parent="GemLocation" instance=ExtResource( 7 )]
+visible = false
+
 [node name="Minimap" parent="." instance=ExtResource( 5 )]
 [connection signal="scroll_picked" from="CollectibleMaps" to="." method="_on_CollectibleMaps_scroll_picked"]
+[connection signal="gem_picked" from="GemLocation/Gem" to="." method="_on_Gem_gem_picked"]

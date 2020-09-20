@@ -22,7 +22,8 @@ Dimanche :
  * [Fait] Affichage minicarte (mode "sonar")
  * [Fait] Collecte cartes (placeholders)
  * [Fait] Association cartes/zones/éléments et leur affichage "permanent" sur minicarte
- * Mécanisme de victoire
+ * [Fait] Mécanisme de victoire
+ * Ecran victoire
  * Modéliser bateau décemment
  * Ecran titre
 

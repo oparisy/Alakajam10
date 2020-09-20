@@ -2,7 +2,7 @@ extends Spatial
 
 signal picked
 
-var elapsed = 0;
+var elapsed = 0
 var baseY
 
 func _ready():
