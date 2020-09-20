@@ -20,4 +20,7 @@
 09h00 Reprise
 09h30 Plus de placeholders, carte du monde faite
 11h00 Travail sur fond, lumière et environnement (ciel, ombres, fog...)
-11h15 Export exe ok, rendu affiné. Pause
+11h15 Export exe ok, rendu affiné
+11h30 Pause repas
+12h15 Reprise
+13h30 Affichage minimap avec position joueur

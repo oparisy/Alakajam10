@@ -45,3 +45,8 @@ func get_input(delta):
 	else:
 		# The ship will slow other time
 		velocity *= 1 - (drag * delta)
+
+
+#Provide user world position to the callee
+func get_position():
+	return translation;

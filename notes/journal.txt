@@ -65,6 +65,7 @@ https://www.youtube.com/watch?v=zhUuxgDT0NA&ab_channel=GodotTutorials
 On peut utiliser plusieurs viewports pour la minimap :
 https://www.youtube.com/watch?v=euQZ-jddoBo&ab_channel=GodotTutorials
 Permet aussi de mélanger 2D et 3D !
+=> Plus simple finalement d'ajouter des objets "HUD" en fin de scène principale
 
 
 Après recherche sur github et étude de :
@@ -142,3 +143,7 @@ Ajout d'antialiasing et d'un peu de blur distant pour éviter "popping"
 
 Export EXE OK : le livrable sera un exe + un pck, dans un zip
 
+HUD : apparemment juste dessiner des conteneurs 2D "à la fin" suffit => ajout à la scène principale
+
+Support antialiasing limité sur _draw() (prévu en version 4.0), les cercles en particulier passent mal
+=> je vais me limiter à des formes petites et simples

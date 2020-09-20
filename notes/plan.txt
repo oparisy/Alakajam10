@@ -16,7 +16,9 @@ Dimanche :
  * [Fait] Scène "monde"
  * [Fait] Améliorer "ciel"
  * [Fait] Soleil pour ombres et aider à s'orienter
+ * [Fait] Fog pour planquer affichage "far" ?
  * [Fait] Tester un export EXE pour éviter les suprises !
+ * [Fait] Affichage minicarte (position joueur)
  * Affichage minicarte (mode "sonar")
  * Collecte cartes (placeholders)
  * Association cartes/zones/éléments et leur affichage "permanent" sur minicarte
@@ -27,7 +29,6 @@ Dimanche :
 
 Extra (ordre arbitraire) :
  * Choix résolution finale
- * Fog pour planquer affichage "far" ?
  * Juicing
  * Musique titre & jeu
  * Perte points de vie joueur (sur collisions)
