@@ -138,3 +138,7 @@ Pour la minicarte :
 
 J'ai un peu (trop) joué avec les effets de transparence et le ciel procédural
 
+Ajout d'antialiasing et d'un peu de blur distant pour éviter "popping"
+
+Export EXE OK : le livrable sera un exe + un pck, dans un zip
+

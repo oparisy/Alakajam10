@@ -15,3 +15,6 @@ fog_color = Color( 0.266667, 0.423529, 0.576471, 1 )
 fog_depth_begin = 200.0
 fog_depth_end = 400.0
 fog_depth_curve = 0.615572
+dof_blur_far_enabled = true
+dof_blur_far_distance = 150.0
+dof_blur_far_transition = 50.0

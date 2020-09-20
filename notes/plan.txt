@@ -16,7 +16,7 @@ Dimanche :
  * [Fait] Scène "monde"
  * [Fait] Améliorer "ciel"
  * [Fait] Soleil pour ombres et aider à s'orienter
- * Tester un export EXE pour éviter les suprises !
+ * [Fait] Tester un export EXE pour éviter les suprises !
  * Affichage minicarte (mode "sonar")
  * Collecte cartes (placeholders)
  * Association cartes/zones/éléments et leur affichage "permanent" sur minicarte

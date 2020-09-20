@@ -20,3 +20,4 @@
 09h00 Reprise
 09h30 Plus de placeholders, carte du monde faite
 11h00 Travail sur fond, lumière et environnement (ciel, ombres, fog...)
+11h15 Export exe ok, rendu affiné. Pause
